@@ -33,3 +33,9 @@ print(threes)
 #Cubes
 cubes=[value**3 for value in range(1,11)]
 print(f"cubes= {cubes}")
+
+# try it yourself page 65
+#slices
+print(f"\nthe first three items from the list of cubes are:{cubes[:3]}")
+print(f"the three items from the middle of the list are: {cubes[4:7]}")
+print(f"the last three items from that list are: {cubes[-3:]}\n")
