@@ -1,29 +1,29 @@
 # try it yourself page 84
-#alien colors
+#5.3alien colors
 color="yellow"
-if color=="green":  #version that passes the test
+if color == "green":  #version that passes the test
     print("congratulations! you juste earned 5 points")
-elif color=="yellow":
+elif color == "yellow":
     print("you earned 10 points")
 else:
     print("you earned 15points")
 
-#stage of life
+#5.6stage of life
 age=15
-if age<2 :
+if age < 2 :
     print("this person is a baby")
-elif age<4:
+elif age < 4:
     print("this person is a toddler")
-elif age<13:
+elif age < 13:
     print("this person is a kid")
-elif age<20:
+elif age < 20:
     print("this person is a teenager")
-elif age<65:
+elif age < 65:
     print("this person is an adult")
 else:
     print("this person is an elder")
 
-#favorite fruit
+#5.7favorite fruit
 favorite_fruits=["dattes","banane","figues"]
 if "banane" in favorite_fruits:
     print("\nyou really like banane")
