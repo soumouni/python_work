@@ -27,9 +27,10 @@ print(f"The favorite number of Dalila is {fav_numbers['dalila']} ")
 glossary={'PEP8':'python enhacement proposal', 'tuple':'list that can not be' 
 ' modified', 'float':'anynumber with a decimal point', 'append':'add to the'
 'end of a list', 'strip':'command that removes blank spaces'}
+glossary['dictionary']='list containing pair of key-value'
+glossary['loop']='repeating bloc of instructions as many times as needed'
 print("\nGLOSSARY:")
-print(f"\nPEP8: \n\t {glossary['PEP8']}")
-print(f"Tuple: \n\t {glossary['tuple']}")
-print(f"float: \n\t {glossary['float']}")
-print(f"Append: \n\t {glossary['append']}")
-print(f"Strip: \n\t {glossary['strip']}")
+for key,value in glossary.items():
+    print(f"{key} : {value}")
+
+
