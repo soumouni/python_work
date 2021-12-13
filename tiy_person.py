@@ -8,20 +8,19 @@ print(f"{Amel['Age']} ans")
 print(Amel['City'])
 
 #6-2 favorite number
+#modified according to 6-10
 fav_numbers={
-    'souad':15,
-    'leila':30,
-    'hachemi':12,
-    'walid':15,
-    'moussadegh':5,
-    'dalila':3,
+    'souad':[15,6,1984],
+    'leila':[30,8,1977],
+    'hachemi':[12,1979],
+    'walid':[15,10,1990],
+    'moussadegh':[5,10,1951],
+    'dalila':[3,10,1954],
 }
-print(f"\nThe favorite number of Souad is {fav_numbers['souad']} ")
-print(f"The favorite number of Leila is {fav_numbers['leila']} ")
-print(f"The favorite number of Hachemi is {fav_numbers['hachemi']} ")
-print(f"The favorite number of Walid is {fav_numbers['walid']} ")
-print(f"The favorite number of Moussadegh is {fav_numbers['moussadegh']} ")
-print(f"The favorite number of Dalila is {fav_numbers['dalila']} ")
+for name, numbers in fav_numbers.items():
+    print(f"{name.title()}'s favorite numbers are:")
+    for numb in numbers:
+        print(numb)
 
 #6-3 Glossary
 glossary={'PEP8':'python enhacement proposal', 'tuple':'list that can not be' 
