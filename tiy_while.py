@@ -23,7 +23,7 @@ i=1
 
 while i<=n:
     print(f"Ticket {i}")
-    age=input(f"\nhow old is ticket's {i} owner")
+    age=input(f"\nhow old is ticket's {i} owner ")
     age=int(age)
     if age < 3:
         print("\nThis ticket is free")
@@ -33,5 +33,11 @@ while i<=n:
         print ("\nYour ticket cost 15$")
     i+=1
 print("\n\t\tEnjoy your movie")
+
+#infinite loop
+while True:
+    print ("I won't stop printing")
+    print ("\n\tPress Ctrl+C if you want to stop this loop")
+    break
 
 
