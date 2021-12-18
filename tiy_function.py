@@ -38,3 +38,46 @@ describe_city('algiers')
 describe_city(name_city='Oran')
 describe_city(name_city='paris', country='france')
 describe_city('london', 'england')
+
+#8-6 City names
+def city_country(city, country):
+    """well formatted cit, country string"""
+    city_country=f"'{city.title()}, {country.title()}'\n"
+    return city_country
+pair1=city_country('algiers', 'algeria')
+pair2=city_country('paris', 'france')
+pair3=city_country('london','england')
+print(pair1)
+print(pair2)
+print(pair3)
+
+#8-7 album
+def make_album(artist_name, album_title, number_songs='none'):
+    """return a dictionary containing album informations"""
+    if number_songs:
+        make_album={'artist':artist_name, 'title':album_title, 
+        'number_of_songs':number_songs}
+    else:
+        make_album={'artist':artist_name, 'title':album_title}
+    return make_album
+first_album=make_album('pink floyd', 'confortably numb')
+second_album=make_album('metallica', 'the unforgiven')
+third_album=make_album('tinariwen', 'aman')
+print(first_album)
+print(second_album)
+print(third_album)
+fourth_album=make_album('cold play', 'yellow', 12)
+print(fourth_album)
+
+#8-8 user albums
+while True:
+    print("please enter album informations: ")
+    print("press 'q' if you want to quit")
+    artist=input("enter album's artist: ")
+    if artist == 'q':
+        break
+    title=input("enter album's title: ")
+    if title == 'q':
+        break
+    album=make_album(artist, title)
+    print(album)
