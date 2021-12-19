@@ -111,3 +111,33 @@ print("\n after send function")
 send_messages(text_messages[:], sent_messages)
 print(f"messages that needs to be sent: {text_messages}")
 print(f" sent messages: {sent_messages}")
+
+#8-12 Sandwiches
+def sandwich(*items):
+    """print list of elements in the sandwich ordered"""
+    print("\nyour sandwich contains:")
+    for item in items:
+        print(item.title())
+
+sandwich('cheese')
+sandwich('tuna', 'cheese')
+sandwich ('salmon', 'cheese', 'cucumber')
+
+#8-13 User profile
+def user_profile(first_name, last_name, **user_info):
+    """return dictionary containing user info"""
+    user_info['first_name']=first_name
+    user_info['last_name']=last_name
+    return user_info
+user=user_profile('souad', 'mimouni',age=37,city='algiers', eye_color='brown')
+print(user)
+
+#8-14 Cars
+def make_cars(manufacturer, model, **car_info):
+    """return dictionary with car information"""
+    car_info['car_manufacturer']=manufacturer
+    car_info['car_model']=model
+    return car_info
+
+car=make_cars('chevrolet', 'spark', color='black', AC= True)
+print(car)
