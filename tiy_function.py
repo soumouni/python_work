@@ -81,3 +81,33 @@ while True:
         break
     album=make_album(artist, title)
     print(album)
+
+#8-9 Messages
+text_messages=['je suis en reunion','je te rappelle', 'sms please']
+text_messages +=['je ne peux pas te parler', 'a tte']
+def show_message(message_list):
+    """displays all messages in the list text_message"""
+    for message in message_list:
+        print(message)
+show_message(text_messages)
+
+#8-10 sending messages
+sent_messages=[]
+
+def send_messages(text_messages, sent_messages):
+    while text_messages:
+        message=text_messages.pop()
+        print (f" sending {message} message")
+        sent_messages.append(message)
+
+print(f"messages that needs to be sent: {text_messages}")
+print(f" sent messages: {sent_messages}")
+print("\n after send function")
+#send_messages(text_messages, sent_messages)
+#print(f"messages that needs to be sent: {text_messages}")
+#print(f" sent messages: {sent_messages}")
+
+#8-11 Archived messages
+send_messages(text_messages[:], sent_messages)
+print(f"messages that needs to be sent: {text_messages}")
+print(f" sent messages: {sent_messages}")
