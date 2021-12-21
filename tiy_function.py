@@ -141,3 +141,19 @@ def make_cars(manufacturer, model, **car_info):
 
 car=make_cars('chevrolet', 'spark', color='black', AC= True)
 print(car)
+
+#8-15 printing models
+import printing_function as function
+
+
+def show_completed_models (completed_models):
+    """ this function shows printed models"""
+    print("bellow are the printed models")
+    for model in completed_models:
+        print(model)
+
+unprinted_design=['phone_case', 'robot', 'popit']
+completed_models=[]
+
+function.print_models(unprinted_design, completed_models)
+show_completed_models(completed_models)
