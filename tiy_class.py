@@ -97,4 +97,47 @@ user_2.greet_user()
 user_2.describe_user()
 user_2.increment_login_attempts()
 user_2.reset_login_attempts()
-user_2.print_login_attempts()
+user_2.print_login_attempts() 
+
+#9-6 Ice cream stand
+class IceCreamStand(Restaurant):
+    """defining ice cream stand as a child of restaurant"""
+    def __init__(self,restaurant_name, cuisine_type, flavors=[]):
+        """define ice cream stand attributes from restaurant
+        include new attribute that is flavor"""
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors=flavors
+    def ice_cream_flavors(self):
+        """print the list of ice cream flavors"""
+        print(f"The Ice cream stand {self.restaurant_name} has the following flavors available:")
+        for flavor in self.flavors:
+            print(flavor)
+        
+gelato=IceCreamStand('Gelato', 'ice cream', ['chocolat', 'vanille', 'fraise'])
+gelato.ice_cream_flavors()
+
+#9-8 privileges
+class Privileges:
+    """stores the possible privileges"""
+    def __init__(self):
+        self.privileges=['can add post', 'can delete post', 'can ban user']
+
+    def show_privileges(self):
+        """print the default list of privileges available to admin"""
+        print ("bellow is the list of privileges avaiable to admin user")
+        for privilege in self.privileges:
+            print(privilege)
+
+#9-7 Admin
+class Admin(User):
+    """defining attributes of admin from parent class 'user' """
+    def __init__(self, first_name, last_name, location, age, login_attempt):
+        """initializing attributes of admin"""
+        super().__init__(first_name, last_name, location, age, login_attempt)
+        self.privileges=Privileges()
+    
+user_3=Admin('Moussadegh', 'Mimouni', 'Algiers', 70, 0)
+user_3.privileges.show_privileges()
+
+
+
