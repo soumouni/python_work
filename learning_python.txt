@@ -1,0 +1,5 @@
+let's summarize what we have learned so far:
+In python, you can create variables, lists, tuple and dictionnary
+In python you can use conditional tests, for loop and while loop
+In python you can also use object oriented programming by defining classes
+In python you can now read files
