@@ -1,6 +1,4 @@
 #here we plot the random walk
-from ast import Break
-from tkinter import Y
 import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 while True:
@@ -9,8 +7,12 @@ while True:
 
     plt.style.use('classic')
     fig, ax=plt.subplots()
-    ax.scatter(mywalk.x_values, mywalk.y_values,c='red', s=5)
+    point_number=range(mywalk.num_points)
+    ax.scatter(mywalk.x_values, mywalk.y_values,c=point_number, 
+    cmap=plt.cm.Blues, edgecolors='none', s=15)
+
     plt.show()
+    
     keep = input('do you want to continue y/n ')
     if keep == 'n':
         break
