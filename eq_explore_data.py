@@ -12,14 +12,10 @@ print(len(all_eq_dicts))
 
 mags,lats, lons, hover_texts=[],[],[],[]
 for eq_dicts in all_eq_dicts:
-    mag=eq_dicts['properties']['mag']
-    lon=eq_dicts['geometry']['coordinates'][0]
-    lat=eq_dicts['geometry']['coordinates'][1]
-    title=eq_dicts['properties']['title']
-    mags.append(mag)
-    lats.append(lat)
-    lons.append(lon)
-    hover_texts.append(title)
+    mags.append(eq_dicts['properties']['mag'])
+    lats.append(eq_dicts['geometry']['coordinates'][1])
+    lons.append(eq_dicts['geometry']['coordinates'][0])
+    hover_texts.append(eq_dicts['properties']['title'])
 
 data=[{
     'type':'scattergeo',
