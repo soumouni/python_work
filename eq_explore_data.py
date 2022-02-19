@@ -30,7 +30,8 @@ data=[{
         'colorbar':{'title':'Magnitude'}
     }
 }]
-my_layout=Layout(title='Global earthquakes')
+title_meta=all_eq_data["metadata"]["title"]
+my_layout=Layout(title=title_meta)
 
 fig={'data':data, 'layout':my_layout}
 offline.plot(fig, filename='global_earthquakes.html')
